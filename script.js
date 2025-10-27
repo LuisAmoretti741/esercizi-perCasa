@@ -170,3 +170,71 @@
 // const rest8 = checkIntegerLambda(5.5)
 // console.log(rest8);
 
+// 19) Scrivere una funzione che dati in input due numeri ritorni il maggiore;
+// function checkMaggiore(n1 , n2) {
+//     const max = (n1 > n2) ? n1 : n2;
+//     return max;
+// }
+
+// const checkMaggioreLambda = (n1 , n2) => (n1 > n2) ? n1 : n2;
+
+// const res9 = checkMaggiore(10, 25);
+// console.log(res9);
+
+// const res10 = checkMaggioreLambda(40, 12);
+// console.log(res10);
+
+// 20) Scrivere una funzione che date in input due stringhe ritorni la più corta;
+// function checkLength(str1, str2) {
+//     if (str1.length < str2.length) {
+//         return str1;
+//     } else if (str2.length < str1.length) {
+//         return str2;
+//     } else{
+//         return "Le due hanno la stessa lunghezza";
+//     }
+// }
+
+// const res11 = checkLength("ciao", "buongiorno");
+// console.log(res11);
+
+// const res12 = checkLength("albero", "sole");
+// console.log(res12);
+
+// const res13 = checkLength("mela", "pera");
+// console.log(res13);
+
+// 21) Scrivere una funzione che data in input una stringa ritorni la sua iniziale;
+// function checkFirstLe(w) {
+//     return w[0];
+// }
+
+// const checkFirstLeLambda = w => w[0];
+
+// const res14 = checkFirstLe("sole");
+// console.log(res14);
+
+// const res15 = checkFirstLeLambda("formaggio");
+// console.log(res15);
+
+
+// 22) scrivere una fuzione che dati in input una stringa e un numero, 
+// logghi la stringa tante volte quante il numereo dato; 
+
+// function checkNumLet(l , n) {
+//     for (let i = 0; i < n; i++) {
+//         console.log(l);
+//     }
+// }
+
+// const checkNumLetLambda = (l, n) => {
+//     for (let i = 0; i < n; i++) {
+//         console.log(l);
+//     }
+// }
+
+// const res16 = checkNumLet("ciao", 3);
+// console.log(res16);
+
+// const res17 = checkNumLetLambda("cacca", 5);
+// console.log(res17);
