@@ -93,22 +93,80 @@
 // }
 // console.log(content);
 
-let size = 8;
-let content = "";
+// let size = 8;
+// let content = "";
 
-// ciclo per le righe
-for (let i = 0; i < size; i++) { 
-    //ciclo per le colonne
-    for (let x = 0; x < size; x++) {
-        // se la somma è pari stampa "#"
-        if ((i + x) % 2 === 0) {
-            content += "#";
-        // se dispari stampa " "
-        } else {
-            content += " ";
-        }
-    }
-    // a fine di ogni riga vai a capo
-    content += "\n";
-}
-console.log(content);
+// // ciclo per le righe
+// for (let i = 0; i < size; i++) { 
+//     //ciclo per le colonne
+//     for (let x = 0; x < size; x++) {
+//         // se la somma è pari stampa "#"
+//         if ((i + x) % 2 === 0) {
+//             content += "#";
+//         // se dispari stampa " "
+//         } else {
+//             content += " ";
+//         }
+//     }
+//     // a fine di ogni riga vai a capo
+//     content += "\n";
+// }
+// console.log(content);
+
+
+//ESERCIZI
+// 16)Scrivi una funzione che mi dice se un numero è pari.
+
+// function checkEven(inputNumber) {
+//     const isEven = inputNumber % 2 === 0;
+//     return isEven;
+// }
+
+// const checkEvenLambda = (inputNumber) => inputNumber % 2 === 0;
+
+// const rs1 = checkEven(22);
+// console.log(rs1);
+
+// const rs2 = checkEven(21);
+// console.log(rs2);
+
+// const rs3 = checkEvenLambda(221);
+// console.log(rs3);
+
+// const rs4 = checkEvenLambda(212);
+// console.log(rs4);
+
+// 17) scrivi una funzione che moltiplichi una stringa per un numero
+// es: se inserisco "cacca" e 3, l'output sarà 'caccacaccacaccacacca'
+
+// function multiplyString(inputString, multiplier) {
+//     let multipliedString = '';
+//     for (let i = 0; i < multiplier; i++) {
+//         multipliedString += inputString;
+//     }
+//     return multipliedString;
+// }
+
+// const multiplyStringLambda = (inputString, multiplier) => inputString.repeat(multiplier);
+
+// const res5 = multiplyString('pippo ',6);
+// console.log(res5);
+
+// const res6 = multiplyStringLambda('pippo ',100);
+// console.log(res6);
+
+// 18) scrivi una funzione che dato un numero mi dice se è intero oppure no
+// function checkInteger(n) {
+//     const isInteger = n % 1 === 0;
+//     return isInteger;
+// }
+
+// const checkIntegerLambda = n => n % 1 === 0;
+
+
+// const rest7 = checkInteger(5)
+// console.log(rest7);
+
+// const rest8 = checkIntegerLambda(5.5)
+// console.log(rest8);
+
