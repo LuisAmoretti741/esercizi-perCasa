@@ -12,17 +12,22 @@
 // let abc = "abc";
 // console.log(abc.length);
 // //→ 3
+// let line = '#'
+// for (let i = 0; i < 7; i++) {
+//     console.log(line);
+//     line += '#'
+// }
 
-// variabile triangle che contiene "#"
-let triangle = "#";
+// // variabile triangle che contiene "#"
+// let triangle = "#";
 
-// finché la lunghezza della stringa è minore o uguale a 7
-while (triangle.length <= 7) {
-  //stampa la stringa
-    console.log(triangle);
-  // aggiungi un altro "#"
-    triangle += "#";
-}
+// // finché la lunghezza della stringa è minore o uguale a 7
+// while (triangle.length <= 7) {
+//   //stampa la stringa
+//     console.log(triangle);
+//   // aggiungi un altro "#"
+//     triangle += "#";
+// }
 
 // ============================================================
 // ============================================================
@@ -38,17 +43,17 @@ while (triangle.length <= 7) {
 // out a significant percentage of programmer candidates. So if you solved
 // it, your labor market value just went up.)
 
-for (let i = 0; i <= 100; i++) {
-    if (i % 3 === 0 && i % 5 === 0) {
-        console.log("FizzBuzz");
-    } else if (i % 5 === 0) {
-        console.log("Buzz");
-    } else if (i % 3 === 0) {
-        console.log("Fizz");
-    } else {
-        console.log(i);
-    }
-}
+// for (let i = 0; i <= 100; i++) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//         console.log("FizzBuzz");
+//     } else if (i % 5 === 0) {
+//         console.log("Buzz");
+//     } else if (i % 3 === 0) {
+//         console.log("Fizz");
+//     } else {
+//         console.log(i);
+//     }
+// }
 
 // ============================================================
 // ============================================================
@@ -70,22 +75,40 @@ for (let i = 0; i <= 100; i++) {
 // size = 8 and change the program so that it works for any size,
 // outputting a grid of the given width and height.
 
-// let size = 8;
-// let content = "";
-
-// // ciclo per le righe
-// for (let i = 0; i < size; i++) { 
-//     //ciclo per le colonne
-//     for (let x = 0; x < size; x++) {
-//         // se la somma è pari stampa "#"
-//         if ((i + x) % 2 ===0) {
-//             content += "#";
-//         // se dispari stampa " "
-//         } else {
-//             content += " ";
-//         }
+// for (let i = 0; i < 8; i++) {
+//     if (i % 2 === 0) {
+//         console.log(' # # # #');
+//     } else {
+//         console.log('# # # #');
 //     }
-//     // a fine di ogni riga vai a capo
-//     content += "\n";
+// }
+
+// let content = '';
+// for (let i = 0; i < 8; i++) {
+//     if (i % 2 === 0) {
+//         content = content + ' # # # #\n';
+//     } else {
+//         content = content + '# # # # \n';
+//     }
 // }
 // console.log(content);
+
+let size = 8;
+let content = "";
+
+// ciclo per le righe
+for (let i = 0; i < size; i++) { 
+    //ciclo per le colonne
+    for (let x = 0; x < size; x++) {
+        // se la somma è pari stampa "#"
+        if ((i + x) % 2 === 0) {
+            content += "#";
+        // se dispari stampa " "
+        } else {
+            content += " ";
+        }
+    }
+    // a fine di ogni riga vai a capo
+    content += "\n";
+}
+console.log(content);
