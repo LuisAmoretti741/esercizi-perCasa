@@ -70,22 +70,22 @@ for (let i = 0; i <= 100; i++) {
 // size = 8 and change the program so that it works for any size,
 // outputting a grid of the given width and height.
 
-let size = 8;
-let content = "";
+// let size = 8;
+// let content = "";
 
-// ciclo per le righe
-for (let i = 0; i < size; i++) { 
-    //ciclo per le colonne
-    for (let x = 0; x < size; x++) {
-        // se la somma è pari stampa "#"
-        if ((i + x) % 2 ===0) {
-            content += "#";
-        // se dispari stampa " "
-        } else {
-            content += " ";
-        }
-    }
-    // a fine di ogni riga vai a capo
-    content += "\n";
-}
-console.log(content);
+// // ciclo per le righe
+// for (let i = 0; i < size; i++) { 
+//     //ciclo per le colonne
+//     for (let x = 0; x < size; x++) {
+//         // se la somma è pari stampa "#"
+//         if ((i + x) % 2 ===0) {
+//             content += "#";
+//         // se dispari stampa " "
+//         } else {
+//             content += " ";
+//         }
+//     }
+//     // a fine di ogni riga vai a capo
+//     content += "\n";
+// }
+// console.log(content);
