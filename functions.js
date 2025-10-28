@@ -217,6 +217,25 @@
 // second argument that indicates the character that is to be counted (rather than counting
 // only uppercase B characters). Rewrite countBs to make use of this new function.
 
+// function countChar(str, char) {
+//     let count = 0;
+//     for (let i = 0; i < str.length; i++) {
+//         if (str[i] === char) {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+
+// function countBs(str) {
+//     return countChar(str, "B")    
+// }
+
+// console.log(countBs('BBC'));
+// console.log(countChar("kakkerlak", "k"));
+
+
+
 
 //--------------------------------------------------------------------------------------------
 //24) Inversione di un numero
@@ -255,42 +274,92 @@
 //Scrivi una funzione fibonacci che prenda un numero N come parametro e restituisca 
 // l’N-esimo numero della sequenza di Fibonacci.
 
-function fibonacci(n) {
-    if (n === 0) {
-        return 0;
-    } else if (n === 1){
-        return 1;
-    }
-    let a = 0; 
-    let b = 1;
+// function fibonacci(n) {
+//     if (n === 0) {
+//         return 0;
+//     } else if (n === 1){
+//         return 1;
+//     }
+//     let a = 0; 
+//     let b = 1;
 
-    for (let i = 2; i <= n ; i++) { 
-        const temp = a + b;
-        a = b;
-        b = temp;
-    }
-    return b;
-}
+//     for (let i = 2; i <= n ; i++) { 
+//         const temp = a + b;
+//         a = b;
+//         b = temp;
+//     }
+//     return b;
+// }
 
-console.log(fibonacci(0));
-console.log(fibonacci(1));
-console.log(fibonacci(7));
-console.log(fibonacci(15));
+// console.log(fibonacci(0));
+// console.log(fibonacci(1));
+// console.log(fibonacci(7));
+// console.log(fibonacci(15));
 
 //--------------------------------------------------------------------------------------------
 //27)  Conteggio vocali
 //Scrivi una funzione contaVocali che prenda una stringa come parametro e restituisca il 
 // numero di vocali presenti.
+// function countVocal(str) {
+//     const vocals = 'aeiouAEIOU';
+//     let count = 0;
+
+//     for (let i = 0; i < str.length; i++) { 
+//         if (vocals.includes(str[i])) {
+//             count++
+//         }
+//     }
+//     return count;
+// }
+
+// const countVocalLambda = str => {
+//     const vocals = 'aeiouAEIOU';
+//     let count = 0;
+
+//     for (let i = 0; i < str.length; i++) { 
+//         if (vocals.includes(str[i])) {
+//             count++
+//         }
+//     }
+//     return count;
+// }
+
+// console.log(countVocal("ciao"));
+// console.log(countVocalLambda("buongiorno"));
+
 //--------------------------------------------------------------------------------------------
 
 //28) Sconto
 //Scrivi una funzione applicaSconto che prenda due numeri come parametri (prezzo e 
 // percentuale di sconto) e restituisca il prezzo scontato.
+
+// function applicaSconto(p, sc) {
+//     const prezzoScontato = p - (p * sc / 100);
+//     return prezzoScontato
+// }
+
+// const applicaScontoLambda = (p, sc) => p - (p * sc / 100);
+
+// console.log(applicaSconto(100, 20));
+// console.log(applicaScontoLambda(500, 10));
+
 //--------------------------------------------------------------------------------------------
 
 //29) Conversione gradi
 //Scrivi una funzione convertiGradi che prenda un numero come parametro (gradi Celsius) e
 //restituisca la conversione in Fahrenheit
+
+// function convertiGradi(c) {
+//     const f = (c * 9 / 5) + 32;
+//     return f;
+// }
+
+// const convertiGradiLambda = c => (c * 9 / 5) + 32;
+
+// console.log(convertiGradi(0));
+// console.log(convertiGradiLambda(100));
+
+
 //--------------------------------------------------------------------------------------------
 
 //30) Verifica password
@@ -300,6 +369,28 @@ console.log(fibonacci(15));
 // - Contiene almeno un carattere speciale tra questi '!#@$%'
 // - Non contiene la parola 'cacca'
 
+// function checkPassword(password) {
+//     const lengthMin = password.length >= 8;
+//     const upperCase = /[A-Z]/.test(password);
+//     const specialChar = /[!#@$%]/.test(password);
+//     const notContWord = !password.toLowerCase().includes("cacca");
+
+//     return lengthMin && upperCase && specialChar && notContWord;
+// }
+
+// const checkPasswordLambda = password => {
+//     const lengthMin = password.length >= 8;
+//     const upperCase = /[A-Z]/.test(password);
+//     const specialChar = /[!#@$%]/.test(password);
+//     const notContWord = !password.toLowerCase().includes("cacca");
+
+//     return lengthMin && upperCase && specialChar && notContWord;
+// }
+
+// console.log(checkPassword("Ciao@123"));
+// console.log(checkPassword("ciao!123"));
+// console.log(checkPassword("cacca@123"));
+// console.log(checkPasswordLambda("Buongiorno$123"));
 
 
 
