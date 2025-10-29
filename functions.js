@@ -517,7 +517,50 @@
 // console.log(checkPassword("cacca@123"));
 // console.log(checkPasswordLambda("Buongiorno$123"));
 
+//==========================================================================================
+//==========================================================================================
+//==========================================================================================
+//==========================================================================================
 
+// 31) Somma dei numeri fino a n
+// Scrivi una funzione sommaFinoAN(n) che restituisce la somma dei numeri da 1 a n.
+
+function sommaFinoN(n) {
+    const somma = 0;
+    for (let i = 1; i <= 5 ; i++) {
+        somma += i
+    }
+    return somma;
+}
+
+console.log(sommaFinoN(5));
+
+
+// sommaFinoAN(5) -> 1 + 2 + 3 + 4 + 5 -> 15
+// 32) Conteggio cifre
+// Scrivi una funzione contaCifre(num) che restituisce il numero di cifre di un numero
+// contaCifre(5) -> 1
+// contaCifre(1245) -> 4
+// 33) Somma delle cifre
+// Scrivi una funzione sommaCifre(num) che restituisce la somma delle cifre di un numero
+// sommaCifre(5) -> 5
+// sommaCifre(1245) -> 12
+// 34) Conversione valuta
+// Scrivi una funzione euroToDollaro(euro) che converte un importo in euro in dollari (1 euro = 1.1 dollari).
+// 35) Calcolo area rettangolo
+// Scrivi una funzione areaRettangolo(base, altezza) che restituisce l’area di un rettangolo.
+// 36) Calcolo media
+// Scrivi una funzione media(a, b, c) che restituisce la media di tre numeri.
+// 37) Generatore di password casuale
+// Scrivi una funzione generaPasswordCasuale() che restituisce una password di 8 caratteri usando solo lettere maiuscole e numeri (usa Math.random())
+// 38) Potenza con ciclo
+// Scrivi una funzione potenzaCiclo(base, esponente) che calcola la potenza usando un ciclo.
+// 39) Scrivi un validatore di email con queste regole:
+// -deve contenere una @
+// -deve contenere un punto posizionato dopo la @
+// -le parti di testo prima della @ e tra la @ e il punto devono almeno avere tre lettere
+// -il punto non può essere l'ultimo carattere
+// 40) crea un converitore tra italiano e farfallino(https://it.wikipedia.org/wiki/Alfabeto_farfallino)
 
 
 
