@@ -171,51 +171,109 @@
 // 2) aggiungere la stringa pippo X
 // 3) mettere tutto maiuscolo X
 // 4) riperterla per il numero di volte del moltiplicatore
-// 5) aggiungergli in fondo la sua lunghezza 
+// 5) aggiungergli in fondo la sua lunghezza
 // 6) rimuovere tutte le p
 /////////////
 
 // function strangeStringFuction(str, multiplier) {
 //     const strWithoutSpaces = str.trim();
 //     console.log('senza spazi -> ', strWithoutSpaces);
-    
+
 //     const strWithPippo = strWithoutSpaces + 'pippo';
 //     console.log('aggiunto pippo -> ', strWithPippo);
-    
+
 //     const strUpper = strWithPippo.toUpperCase();
 //     console.log('maiuscolo ->', strUpper);
 
 //     const strMultiplied = strUpper.repeat(multiplier);
 //     console.log('moltiplicata ->', strMultiplied);
-    
+
 //     const strWithLength = strMultiplied + strMultiplied.length;
 //     console.log('con lunghezza ->', strWithLength);
-    
+
 //     let strWithoutP = '';
 //     for (let i = 0; i < strWithLength.length; i++) {
 //         const char = strWithLength.charAt(i);
 //         if (char !== 'P') {
 //             strWithoutP += char;
-//         }        
+//         }
 //     }
 //     console.log('senza p -> ',strWithoutP);
-    
+
 // }
 
 // strangeStringFuction('      luis papapa', 4);
 
 
 //ESERCIZIO
-// 23) You can get the Nth character, or letter, from a string by writing [N] after the string 
-// (for example, string[2]). The resulting value will be a string containing only one 
-// character (for example, "b"). The first character has position 0, which causes the 
-// last one to be found at position string.length - 1. In other words, a two-character 
+// 23) You can get the Nth character, or letter, from a string by writing [N] after the string
+// (for example, string[2]). The resulting value will be a string containing only one
+// character (for example, "b"). The first character has position 0, which causes the
+// last one to be found at position string.length - 1. In other words, a two-character
 // string has length 2, and its characters have positions 0 and 1.
-// Write a function called countBs that takes a string as its only argument and returns a 
+// Write a function called countBs that takes a string as its only argument and returns a
 // number that indicates how many uppercase B characters there are in the string.
-// Next, write a function called countChar that behaves like countBs, except it takes a 
+// Next, write a function called countChar that behaves like countBs, except it takes a
 // second argument that indicates the character that is to be counted (rather than counting
 // only uppercase B characters). Rewrite countBs to make use of this new function.
+
+// function countBs(str) {
+//     let count = 0;
+//     for (let i = 0; i < str.length; i++) {
+
+//         const selectedChar = str[i];
+//         const lowerChar = selectedChar.toLowerCase();
+
+//         if (lowerChar === 'b') {
+//             count ++
+//         }
+//     }
+//     return count;
+// }
+
+// console.log(countBs('babbeo')); // -> 3
+// console.log(countBs('BAMBINO')); // -> 3
+
+
+// function countChar(str, char) {
+//     let count = 0;
+//     for (let i = 0; i < str.length; i++) {
+
+//         const selectedChar = str[i];
+//         const lowerChar = selectedChar.toLowerCase();
+//         const charLower = char.toLowerCase();
+
+
+//         if (lowerChar === charLower) {
+//             count ++
+//         }
+//     }
+//     return count;
+// }
+
+// console.log(countChar('mammamia', 'm')); // -> 4
+
+// function countCharSensitive(str, char, isSensitive) {
+//     let count = 0;
+//     for (let i = 0; i < str.length; i++) {
+
+//         const selectedChar = str[i];
+
+//         if (!isSensitive) {
+//             selectedChar = selectedChar.toLowerCase();
+//             char = char.toLowerCase();
+//         }
+
+//         if (selectedChar === char) {
+//             count ++
+//         }
+//     }
+//     return count;
+// }
+
+// console.log(countCharSensitive('luis', 'l', false));
+
+
 
 // function countChar(str, char) {
 //     let count = 0;
@@ -228,19 +286,31 @@
 // }
 
 // function countBs(str) {
-//     return countChar(str, "B")    
+//     return countChar(str, "B");
 // }
 
 // console.log(countBs('BBC'));
 // console.log(countChar("kakkerlak", "k"));
 
-
-
-
 //--------------------------------------------------------------------------------------------
 //24) Inversione di un numero
 //Scrivi una funzione invertiNumero che prenda un numero come parametro e restituisca il
 //numero con le cifre invertite (es. 123 → 321).
+
+// function invertiNumero(n) {
+//     const numberToString = String(n);
+//     let reversed = '';
+
+//     for (let i = numberToString.length -1; i >= 0 ; i--) {
+//         const char = numberToString[i];
+
+//         reversed += char;
+//     }
+//     return Number(reversed);
+// }
+
+// console.log(invertiNumero(12345));
+
 // function reverseNumbers(nr) {
 //     const segno = Math.sign(nr);
 //     const str =  Math.abs(nr).toString();
@@ -255,23 +325,23 @@
 
 //--------------------------------------------------------------------------------------------
 //25) Tabellina
-//Scrivi una funzione tabellina che prenda un numero come parametro e stampi in console 
+//Scrivi una funzione tabellina che prenda un numero come parametro e stampi in console
 // la tabellina di quel numero fino a 10.
 
 // function tabellina(base) {
 //     for (let i = 0; i <= 10; i++) {
 //         let op = base * i;
-//         console.log(op)
+//         console.log(base + " * " + i + " = " + op);
 //     }
 // }
-// console.log(tabellina(10));
+// console.log(tabellina(2));
 
-// const tabellinaLambda = base => { for (let i = 0; i <= 10; i++) { let op = base * i; console.log(op);}} 
+// const tabellinaLambda = base => { for (let i = 0; i <= 10; i++) { let op = base * i; console.log(base + " * " + i + " = " + op);}}
 // console.log(tabellinaLambda(50));
 
 //--------------------------------------------------------------------------------------------
 //26) Fibonacci
-//Scrivi una funzione fibonacci che prenda un numero N come parametro e restituisca 
+//Scrivi una funzione fibonacci che prenda un numero N come parametro e restituisca
 // l’N-esimo numero della sequenza di Fibonacci.
 
 // function fibonacci(n) {
@@ -280,10 +350,10 @@
 //     } else if (n === 1){
 //         return 1;
 //     }
-//     let a = 0; 
+//     let a = 0;
 //     let b = 1;
 
-//     for (let i = 2; i <= n ; i++) { 
+//     for (let i = 3; i <= n ; i++) {
 //         const temp = a + b;
 //         a = b;
 //         b = temp;
@@ -293,44 +363,75 @@
 
 // console.log(fibonacci(0));
 // console.log(fibonacci(1));
+// console.log(fibonacci(5));
 // console.log(fibonacci(7));
-// console.log(fibonacci(15));
+
+// function fiboRecursive(n) {
+//     if (n < 1) {
+//         return n;
+//     } else {
+//         return fiboRecursive(n - 1) + fiboRecursive(n - 2);
+//     }
+// }
+
 
 //--------------------------------------------------------------------------------------------
 //27)  Conteggio vocali
-//Scrivi una funzione contaVocali che prenda una stringa come parametro e restituisca il 
+//Scrivi una funzione contaVocali che prenda una stringa come parametro e restituisca il
 // numero di vocali presenti.
-// function countVocal(str) {
-//     const vocals = 'aeiouAEIOU';
+
+// function countVowels(str) {
 //     let count = 0;
 
 //     for (let i = 0; i < str.length; i++) { 
-//         if (vocals.includes(str[i])) {
+        
+//         const selectedChar = str [i];
+//         const lowerChar = selectedChar.toLowerCase();
+
+//         if (lowerChar === 'a'
+//             || lowerChar === 'e'
+//             || lowerChar === 'i'
+//             || lowerChar === 'o'
+//             || lowerChar === 'u') {
 //             count++
 //         }
 //     }
 //     return count;
 // }
 
-// const countVocalLambda = str => {
-//     const vocals = 'aeiouAEIOU';
+// console.log(countVowels('ciao'));
+
+// function countVowels(str) {
+//     const vowels = 'aeiouAEIOU';
 //     let count = 0;
 
-//     for (let i = 0; i < str.length; i++) { 
-//         if (vocals.includes(str[i])) {
+//     for (let i = 0; i < str.length; i++) {
+//         if (vowels.includes(str[i])) {
 //             count++
 //         }
 //     }
 //     return count;
 // }
 
-// console.log(countVocal("ciao"));
-// console.log(countVocalLambda("buongiorno"));
+// const countVowelsLambda = str => {
+//     const vowels = 'aeiouAEIOU';
+//     let count = 0;
+
+//     for (let i = 0; i < str.length; i++) {
+//         if (vowels.includes(str[i])) {
+//             count++
+//         }
+//     }
+//     return count;
+// }
+
+// console.log(countVowels("ciao"));
+// console.log(countVowelsLambda("buongiorno"));
 
 //--------------------------------------------------------------------------------------------
 
 //28) Sconto
-//Scrivi una funzione applicaSconto che prenda due numeri come parametri (prezzo e 
+//Scrivi una funzione applicaSconto che prenda due numeri come parametri (prezzo e
 // percentuale di sconto) e restituisca il prezzo scontato.
 
 // function applicaSconto(p, sc) {
@@ -356,7 +457,7 @@
 
 // const convertiGradiLambda = c => (c * 9 / 5) + 32;
 
-// console.log(convertiGradi(0));
+// console.log(convertiGradi(30));
 // console.log(convertiGradiLambda(100));
 
 
@@ -368,6 +469,30 @@
 // - Contiene almeno una lettera maiuscola
 // - Contiene almeno un carattere speciale tra questi '!#@$%'
 // - Non contiene la parola 'cacca'
+
+// function checkPassword(password) {
+//     if (password.length < 8) {
+//         return false;
+//     } else {
+//         if (password.toLowerCase() === password) {
+//             return false;
+//         } else {
+//             if (password.incluides("!")
+//             || password.incluides("#")
+//             || password.incluides("@")
+//             || password.incluides("$")
+//             || password.incluides("%")) {
+//                 if (password.incluides("cacca")) {
+//                     return false;
+//                 } else {
+//                     return true;
+//                 }
+//             } else {
+//                 return false;
+//             }
+//         }
+//     }
+// }
 
 // function checkPassword(password) {
 //     const lengthMin = password.length >= 8;
@@ -387,7 +512,7 @@
 //     return lengthMin && upperCase && specialChar && notContWord;
 // }
 
-// console.log(checkPassword("Ciao@123"));
+// console.log(checkPassword("Ciao@ad"));
 // console.log(checkPassword("ciao!123"));
 // console.log(checkPassword("cacca@123"));
 // console.log(checkPasswordLambda("Buongiorno$123"));
