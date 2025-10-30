@@ -525,41 +525,124 @@
 // 31) Somma dei numeri fino a n
 // Scrivi una funzione sommaFinoAN(n) che restituisce la somma dei numeri da 1 a n.
 
-function sommaFinoN(n) {
-    const somma = 0;
-    for (let i = 1; i <= 5 ; i++) {
-        somma += i
-    }
-    return somma;
-}
+// function sommaFinoN(n) {
+//     let somma = 0;
+//     for (let i = 1; i <= n ; i++) {
+//         somma += i;
+//     }
+//     return somma;
+// }
 
-console.log(sommaFinoN(5));
+// console.log(sommaFinoN(10));
 
-
-// sommaFinoAN(5) -> 1 + 2 + 3 + 4 + 5 -> 15
 // 32) Conteggio cifre
 // Scrivi una funzione contaCifre(num) che restituisce il numero di cifre di un numero
 // contaCifre(5) -> 1
 // contaCifre(1245) -> 4
+
+// function contaCifre(num) {
+//     let numberToString = num.toString();
+//     let numberLength = numberToString.length;
+//     return numberLength;
+// }
+
+// console.log(contaCifre(5));
+// console.log(contaCifre(14552));
+
 // 33) Somma delle cifre
 // Scrivi una funzione sommaCifre(num) che restituisce la somma delle cifre di un numero
 // sommaCifre(5) -> 5
 // sommaCifre(1245) -> 12
+
+// function sommaCifre(num) {
+//     let numString = num.toString();
+//     let somma = 0;
+    
+//     for (let i = 0; i < numString.length; i++) {
+//         somma += Number(numString[i]);
+//     }
+//     return somma;
+// }
+
+// console.log(sommaCifre(52668));
+
+
 // 34) Conversione valuta
 // Scrivi una funzione euroToDollaro(euro) che converte un importo in euro in dollari (1 euro = 1.1 dollari).
+
+// function euroToDollaro(importo) {
+//     let importoDollaro = importo * 1.1;
+//     return importoDollaro;
+// }
+
+// console.log(euroToDollaro(1));
+// console.log(euroToDollaro(10));
+
+
 // 35) Calcolo area rettangolo
 // Scrivi una funzione areaRettangolo(base, altezza) che restituisce l’area di un rettangolo.
+
+// function areaRettangolo(base, altezza) {
+//     let risultato = base * altezza;
+//     return risultato;
+// }
+
+// console.log(areaRettangolo(4, 3));
+
 // 36) Calcolo media
 // Scrivi una funzione media(a, b, c) che restituisce la media di tre numeri.
+
+// function media(a, b, c) {
+//     let calcolo = (a + b + c)/3;
+//     let calcoloF = Number(calcolo.toFixed(2));
+//     return calcoloF;
+// }
+
+// console.log(media(6, 7, 4));
+
 // 37) Generatore di password casuale
 // Scrivi una funzione generaPasswordCasuale() che restituisce una password di 8 caratteri usando solo lettere maiuscole e numeri (usa Math.random())
+
+// function generaPasswordCasuale() {
+//     const char = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+//     let password = '';
+
+//     for (let i = 0; i < 8; i++) {
+//         const passCasuale = Math.floor(Math.random() * char.length);
+//         password += char[passCasuale];
+//     }
+//     return password;
+// }
+
+// console.log(generaPasswordCasuale());
+
+
 // 38) Potenza con ciclo
 // Scrivi una funzione potenzaCiclo(base, esponente) che calcola la potenza usando un ciclo.
+
+// function potenzaCiclo(base, esponente) {
+//     let risultato = 1;
+
+//     for (let i = 0; i < esponente; i++) {
+//         risultato *= base;
+//     }
+//     return risultato;
+// }
+
+// console.log(potenzaCiclo(2, 3));
+
 // 39) Scrivi un validatore di email con queste regole:
 // -deve contenere una @
 // -deve contenere un punto posizionato dopo la @
 // -le parti di testo prima della @ e tra la @ e il punto devono almeno avere tre lettere
 // -il punto non può essere l'ultimo carattere
+
+function validatoreEmail(email) {
+    if (email.includes('@')) {
+        
+    }
+}
+
 // 40) crea un converitore tra italiano e farfallino(https://it.wikipedia.org/wiki/Alfabeto_farfallino)
 
 
