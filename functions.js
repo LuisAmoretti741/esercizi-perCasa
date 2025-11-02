@@ -637,13 +637,71 @@
 // -le parti di testo prima della @ e tra la @ e il punto devono almeno avere tre lettere
 // -il punto non può essere l'ultimo carattere
 
-function validatoreEmail(email) {
-    if (email.includes('@')) {
-        
-    }
-}
+// function validaEmail(email) {
+//     // deve contenere una "@"
+//     let posizioneChiocciola = email.indexOf("@");
+//     if (posizioneChiocciola === -1) {
+//         return false;
+//     }
+
+//     // deve contenere un "." dopo la "@"
+//     let posizionePunto = email.indexOf(".", posizioneChiocciola);
+//     if (posizionePunto === -1) {
+//         return false;
+//     }
+
+//     // almeno 3 lettere prima della "@"
+//     if (posizioneChiocciola < 3) {
+//         return false;
+//     }
+
+//     // almeno 3 lettere tra "@" e "."
+//     if (posizionePunto - posizioneChiocciola - 1 < 3) {
+//         return false;
+//     }
+
+//     // il "." non può essere l’ultimo carattere
+//     if (posizionePunto === email.length - 1) {
+//         return false;
+//     }
+
+//     // se supera tutti i controlli → email valida
+//     return true;
+// }
+
+// console.log(validaEmail("abc@xyz.com"));  
+// console.log(validaEmail("ab@xyz.com")); 
+// console.log(validaEmail("abc@xy.com")); 
+// console.log(validaEmail("abc@xyz."));    
+// console.log(validaEmail("abcxyz.com"));  
+
+
 
 // 40) crea un converitore tra italiano e farfallino(https://it.wikipedia.org/wiki/Alfabeto_farfallino)
+
+// function italianoInFarfallino(testo) {
+//     // Elenco delle vocali
+//     const vocali = "aeiouAEIOU";
+//     let risultato = "";
+
+//     // Scorre ogni lettera del testo
+//     for (let i = 0; i < testo.length; i++) {
+//         let lettera = testo[i];
+
+//         // Se è una vocale, aggiunge "f" + la stessa vocale
+//         if (vocali.includes(lettera)) {
+//             risultato += lettera + "f" + lettera;
+//         } else {
+//             risultato += lettera;
+//         }
+//     }
+
+//     return risultato;
+// }
+
+// console.log(italianoInFarfallino("buongiorno"));   
+// console.log(italianoInFarfallino("amore"));   
+// console.log(italianoInFarfallino("Buona sera")); 
 
 
 
