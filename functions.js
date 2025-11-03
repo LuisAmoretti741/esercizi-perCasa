@@ -749,25 +749,25 @@
 
 // 40) crea un converitore tra italiano e farfallino(https://it.wikipedia.org/wiki/Alfabeto_farfallino)
 
-function farfallinoTranslator(str) {
-    const vowels = "aeiou";
+// function farfallinoTranslator(str) {
+//     const vowels = "aeiou";
 
-    let farfallinoStr = '';
+//     let farfallinoStr = '';
 
-    for (let i = 0; i < str.length; i++) {
-        const char = str[i];
+//     for (let i = 0; i < str.length; i++) {
+//         const char = str[i];
 
-        if (vowels.includes(char.toLowerCase())) {
-            farfallinoStr = farfallinoStr + char + 'f' + char;
-        } else {
-            farfallinoStr = farfallinoStr + char;
-        }
-    }
-    return farfallinoStr;
-}
+//         if (vowels.includes(char.toLowerCase())) {
+//             farfallinoStr = farfallinoStr + char + 'f' + char;
+//         } else {
+//             farfallinoStr = farfallinoStr + char;
+//         }
+//     }
+//     return farfallinoStr;
+// }
 
-console.log(farfallinoTranslator('ciao'));
-console.log(farfallinoTranslator('CIAO'));
+// console.log(farfallinoTranslator('ciao'));
+// console.log(farfallinoTranslator('CIAO'));
 
 
 
@@ -796,6 +796,55 @@ console.log(farfallinoTranslator('CIAO'));
 // console.log(italianoInFarfallino("Buona sera")); 
 
 
+
+const numbers = [1, 2, 4, 56, 78, 11, -123, 3, -23, 2, 22, 4];
+//41) creare una funzione che dato un array di numeri li eleva tutti al quadrato
+
+// function squareArray(nbrArray) {
+//     const newArray = [];
+//     for (let i = 0; i < nbrArray.length; i++) {
+//         const element = nbrArray[i];
+//         const square = element ** 2;
+//         newArray.push(square);
+//     }
+//     return newArray;
+// }
+
+// console.log(squareArray(numbers)) //-> [1, 4, 16, 3136, ....]
+
+
+//42) creare una funzione che dato un array di numeri li eleva al quadrato solo i numeri dispari
+
+// function squareOddArray(nbrArray) {
+//     const newArray = [];
+//     for (const n of nbrArray) {
+//         if (n % 2 !== 0) {
+//             newArray.push(n ** 2);
+//         } else {
+//             newArray.push(n);
+//         }
+//     }
+//     return newArray;
+// }
+
+// console.log(squareOddArray(numbers)) //-> [1, 2, 4, 56, 78, 121, 15129, 9, 529, 2, 22, 4]
+
+//42) creare una funzione che dato un array di numeri moltiplichi per due quelli positivi e divida per due i negativi
+
+// function multiplyPoisitiveAndDivideNegative(nbrArray) {
+//     const newArray = [];
+//     for (const n of nbrArray) {
+//         if (n > 0) {
+//             newArray.push(n * 2);
+//         } else if (n < 0) {
+//             newArray.push(n / 2);
+//         } else {
+//             newArray.push(n)
+//         }
+//     }
+//     return newArray;
+// }
+// console.log(multiplyPoisitiveAndDivideNegative(numbers)) //-> [2, 4, 8, 112, 156, 22, -61.5, 6, -11.5, 4, 44, 8];
 
 
 
