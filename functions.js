@@ -533,7 +533,7 @@
 //     return somma;
 // }
 
-// console.log(sommaFinoN(10));
+// console.log(sommaFinoN(3));
 
 // 32) Conteggio cifre
 // Scrivi una funzione contaCifre(num) che restituisce il numero di cifre di un numero
@@ -541,12 +541,12 @@
 // contaCifre(1245) -> 4
 
 // function contaCifre(num) {
-//     let numberToString = num.toString();
-//     let numberLength = numberToString.length;
+//     const numberToString = num.toString(); //String(num);
+//     const numberLength = numberToString.length;
 //     return numberLength;
 // }
 
-// console.log(contaCifre(5));
+// console.log(contaCifre(15));
 // console.log(contaCifre(14552));
 
 // 33) Somma delle cifre
@@ -554,8 +554,8 @@
 // sommaCifre(5) -> 5
 // sommaCifre(1245) -> 12
 
-// function sommaCifre(num) {
-//     let numString = num.toString();
+// function sommaCifre(num) { 
+//     let numString = num.toString(); //String(num);
 //     let somma = 0;
     
 //     for (let i = 0; i < numString.length; i++) {
@@ -564,14 +564,14 @@
 //     return somma;
 // }
 
-// console.log(sommaCifre(52668));
+// console.log(sommaCifre(52));
 
 
 // 34) Conversione valuta
 // Scrivi una funzione euroToDollaro(euro) che converte un importo in euro in dollari (1 euro = 1.1 dollari).
 
 // function euroToDollaro(importo) {
-//     let importoDollaro = importo * 1.1;
+//     const importoDollaro = importo * 1.15;
 //     return importoDollaro;
 // }
 
@@ -583,8 +583,8 @@
 // Scrivi una funzione areaRettangolo(base, altezza) che restituisce l’area di un rettangolo.
 
 // function areaRettangolo(base, altezza) {
-//     let risultato = base * altezza;
-//     return risultato;
+//     const area = base * altezza;
+//     return area;
 // }
 
 // console.log(areaRettangolo(4, 3));
@@ -603,30 +603,29 @@
 // 37) Generatore di password casuale
 // Scrivi una funzione generaPasswordCasuale() che restituisce una password di 8 caratteri usando solo lettere maiuscole e numeri (usa Math.random())
 
-// function generaPasswordCasuale() {
+// function generaPassword() {
 //     const char = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 //     let password = '';
 
 //     for (let i = 0; i < 8; i++) {
-//         const passCasuale = Math.floor(Math.random() * char.length);
-//         password += char[passCasuale];
+//         password += char[passCasuale = Math.floor(Math.random() * char.length)]; 
 //     }
 //     return password;
 // }
 
-// console.log(generaPasswordCasuale());
+// console.log(generaPassword());
 
 
 // 38) Potenza con ciclo
 // Scrivi una funzione potenzaCiclo(base, esponente) che calcola la potenza usando un ciclo.
 
 // function potenzaCiclo(base, esponente) {
-//     let risultato = 1;
+//     let pow = 1;
 
 //     for (let i = 0; i < esponente; i++) {
-//         risultato *= base;
+//         pow *= base;
 //     }
-//     return risultato;
+//     return pow;
 // }
 
 // console.log(potenzaCiclo(2, 3));
@@ -636,6 +635,77 @@
 // -deve contenere un punto posizionato dopo la @
 // -le parti di testo prima della @ e tra la @ e il punto devono almeno avere tre lettere
 // -il punto non può essere l'ultimo carattere
+
+// function constainsAt(email) {
+//     if (email.includes('@')) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// function constainsDotAfterAt(email) {
+//     const dotPosition =  email.indexOf('.');
+
+//     if (dotPosition === -1) {
+//         return false
+//     } 
+
+//     const atPosition =  email.indexOf('@');
+
+//     if (dotPosition > atPosition) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// function firstAndSecondPartlengthIsThreeOrMore(email) {
+//     const atPosition =  email.indexOf('@');
+//     const firstPart = email.substring(0, atPosition);
+
+//     const dotPosition =  email.indexOf('.');
+//     const secondPart = email.substring(atPosition + 1,dotPosition);
+
+//     if (firstPart.length >= 3 && secondPart.length >= 3) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// function lastCharMustBeDifferentFromDot(email){
+//     const lastPosition = email.length -1;
+//     const lastChar = email[lastPosition];
+
+//     if (lastChar === '.') {
+//         return false;
+//     } else {
+//         return true;
+//     }
+// }
+
+// function emailValidator(email) {
+//     if (!constainsAt(email)) {
+//         return false;
+//     } else if (!constainsDotAfterAt(email)){
+//         return false;
+//     } else if (!firstAndSecondPartlengthIsThreeOrMore(email)){
+//         return false;
+//     } else if (!lastCharMustBeDifferentFromDot(email)){
+//         return false;
+//     } else {
+//         return true;
+//     }
+// }
+
+
+
+// console.log(emailValidator('ciaociao'));
+// console.log(emailValidator('ciao@ciao.1'));
+
+
+
 
 // function validaEmail(email) {
 //     // deve contenere una "@"
@@ -665,7 +735,7 @@
 //         return false;
 //     }
 
-//     // se supera tutti i controlli → email valida
+//     // email valida
 //     return true;
 // }
 
@@ -679,16 +749,38 @@
 
 // 40) crea un converitore tra italiano e farfallino(https://it.wikipedia.org/wiki/Alfabeto_farfallino)
 
+function farfallinoTranslator(str) {
+    const vowels = "aeiou";
+
+    let farfallinoStr = '';
+
+    for (let i = 0; i < str.length; i++) {
+        const char = str[i];
+
+        if (vowels.includes(char.toLowerCase())) {
+            farfallinoStr = farfallinoStr + char + 'f' + char;
+        } else {
+            farfallinoStr = farfallinoStr + char;
+        }
+    }
+    return farfallinoStr;
+}
+
+console.log(farfallinoTranslator('ciao'));
+console.log(farfallinoTranslator('CIAO'));
+
+
+
 // function italianoInFarfallino(testo) {
-//     // Elenco delle vocali
+//     // elenco delle vocali
 //     const vocali = "aeiouAEIOU";
 //     let risultato = "";
 
-//     // Scorre ogni lettera del testo
+//     // scorre ogni lettera del testo
 //     for (let i = 0; i < testo.length; i++) {
 //         let lettera = testo[i];
 
-//         // Se è una vocale, aggiunge "f" + la stessa vocale
+//         // se ce una vocale, aggiunge "f" + la stessa vocale
 //         if (vocali.includes(lettera)) {
 //             risultato += lettera + "f" + lettera;
 //         } else {
