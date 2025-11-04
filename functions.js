@@ -846,7 +846,42 @@ const numbers = [1, 2, 4, 56, 78, 11, -123, 3, -23, 2, 22, 4];
 // }
 // console.log(multiplyPoisitiveAndDivideNegative(numbers)) //-> [2, 4, 8, 112, 156, 22, -61.5, 6, -11.5, 4, 44, 8];
 
+// 43) Trova il Minimo
+// Scrivi una funzione trovaMinimo(array) che restituisce il numero più piccolo in un array di numeri.
 
+
+
+// 44) Inverti Array con un ciclo
+// Scrivi una funzione invertiArray(array) che restituisce un nuovo array con gli elementi in ordine inverso.
+
+
+
+// 45) Maiuscolo Tutte le Parole
+// Scrivi una funzione maiuscoloTutto(array) che restituisce un nuovo array con tutte le stringhe in maiuscolo.
+
+
+
+// 46) Somma Righe Matrice
+// Scrivi una funzione sommaRighe(matrice) che restituisce un array con la somma degli elementi di ogni riga.
+
+
+
+// 47) Conta Occorrenze
+// Scrivi una funzione contaOccorrenze(array, elemento) che conta quante volte un elemento appare in un array
+
+
+
+// 48) Filtra indice pari
+// Scrivi una funzione filtraIndicePari(array) che tiene tutti gli elementi in posizione dispari
+
+
+
+// 49) Somma pari 
+// Scrivi una funzione sommaPari(array) che somma tutti i numeri pari
+
+
+// 50) trova lunghezze
+// Scrivi una funzione trovaLunghezzeParola(array) che restituisce un array delle lunghezze(numeri) delle stringhe che compongono l'array in input
 
 
 
