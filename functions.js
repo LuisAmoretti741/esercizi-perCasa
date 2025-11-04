@@ -798,6 +798,17 @@
 
 
 const numbers = [1, 2, 4, 56, 78, 11, -123, 3, -23, 2, 22, 4];
+const numeri = [1, 2, 3, 4, 5, 6, 7, 8];
+const matrice = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+const parole = ["ciao", "mondo", "javascript", "array"];
+
+const frutti = ["mela", "banana", "mela", "pera", "mela", "banana", "pero", "mela"];
+
 //41) creare una funzione che dato un array di numeri li eleva tutti al quadrato
 
 // function squareArray(nbrArray) {
@@ -846,43 +857,136 @@ const numbers = [1, 2, 4, 56, 78, 11, -123, 3, -23, 2, 22, 4];
 // }
 // console.log(multiplyPoisitiveAndDivideNegative(numbers)) //-> [2, 4, 8, 112, 156, 22, -61.5, 6, -11.5, 4, 44, 8];
 
+
+
 // 43) Trova il Minimo
 // Scrivi una funzione trovaMinimo(array) che restituisce il numero più piccolo in un array di numeri.
+// function trovaMinimo(nbrArray) {
+//     let minimo = nbrArray[0];
+    
+//     for (let i = 1; i < nbrArray.length; i++) {
+//         if (nbrArray[i] < minimo) {
+//             minimo = nbrArray[i];
+//         }
+//     }
+//     return minimo;
+// }
 
-
+// console.log(trovaMinimo(numbers));
 
 // 44) Inverti Array con un ciclo
 // Scrivi una funzione invertiArray(array) che restituisce un nuovo array con gli elementi in ordine inverso.
+// function invertiArray(nbrArray) {
+//     let reverseArray = [];
 
+//     for (let i = nbrArray.length - 1; i >= 0; i--) {
+//         reverseArray.push(nbrArray[i]);
+//     }
+//     return reverseArray;
+// }
 
+// console.log(invertiArray(numeri));
 
 // 45) Maiuscolo Tutte le Parole
 // Scrivi una funzione maiuscoloTutto(array) che restituisce un nuovo array con tutte le stringhe in maiuscolo.
 
+// function maiuscoloTutto(nbrArray) {
+//     let upperWord = [];
 
+//     for (let i = 0; i < nbrArray.length; i++) {
+//         const element = nbrArray[i].toUpperCase();
+
+//         upperWord.push(element);
+//     }
+//     return upperWord;
+// }
+
+// console.log(maiuscoloTutto(parole));
 
 // 46) Somma Righe Matrice
 // Scrivi una funzione sommaRighe(matrice) che restituisce un array con la somma degli elementi di ogni riga.
+// function sommaRighe(nbrArray) {
+//     let risultato = [];
 
+//     for (let i = 0; i < nbrArray.length; i++) {
+//         let somma = 0;
+        
+//         for (let j = 0; j < nbrArray[i].length; j++) {
+//             somma += nbrArray[i][j];
+//         }
+//         risultato.push(somma);
+//     }
+//     return risultato;
+// }
+
+
+// console.log(sommaRighe(matrice));
 
 
 // 47) Conta Occorrenze
 // Scrivi una funzione contaOccorrenze(array, elemento) che conta quante volte un elemento appare in un array
+// function contaOccorrenze(array, elemento) {
+//     let cont = 0;
 
+//     for (let i = 0; i < array.length; i++) {
+//         if (array[i] === elemento) {
+//             cont++;
+//         }
+//     }
+//     return cont;
+// }
 
+// console.log(contaOccorrenze(frutti, "mela"));
 
 // 48) Filtra indice pari
 // Scrivi una funzione filtraIndicePari(array) che tiene tutti gli elementi in posizione dispari
+function filtraIndicePari(array) {
+    let nuovoArray = [];
 
+    for (let i = 0; i < array.length; i++) {
+        if (i % 2 !== 0) {
+            nuovoArray.push(array[i]);
+        }        
+    }
+    return nuovoArray;
+}
+console.log(filtraIndicePari(numbers));
 
 
 // 49) Somma pari 
 // Scrivi una funzione sommaPari(array) che somma tutti i numeri pari
 
+// function sommaPari(nbrArray) {
+//     let risultatoPari = 0;
+
+//     for (let i = 0; i < nbrArray.length; i++) {
+//         const element = nbrArray[i];
+        
+//         if (element % 2 === 0) {
+//             risultatoPari += nbrArray[i];
+//         }
+//     }
+
+//     return risultatoPari;
+// }
+
+// console.log(sommaPari(numeri));
+
 
 // 50) trova lunghezze
 // Scrivi una funzione trovaLunghezzeParola(array) che restituisce un array delle lunghezze(numeri) delle stringhe che compongono l'array in input
 
+// function trovaLunghezzeParola(nbrArray) {
+//     let numLengthWord = [];
+
+//     for (let i = 0; i < nbrArray.length; i++) {
+//         const element = nbrArray[i].length;
+//         numLengthWord.push(element);
+//     }
+//     return numLengthWord;
+// }
+
+// console.log(trovaLunghezzeParola(parole));
 
 
 
