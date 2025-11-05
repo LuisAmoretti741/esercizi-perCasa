@@ -807,7 +807,7 @@ const matrice = [
 
 const parole = ["ciao", "mondo", "javascript", "array"];
 
-const frutti = ["mela", "banana", "mela", "pera", "mela", "banana", "pero", "mela"];
+const frutti = ["mela", "banana", "mela", "pera", "mela", "banana", "pera", "mela"];
 
 //41) creare una funzione che dato un array di numeri li eleva tutti al quadrato
 
@@ -843,9 +843,9 @@ const frutti = ["mela", "banana", "mela", "pera", "mela", "banana", "pero", "mel
 //42) creare una funzione che dato un array di numeri moltiplichi per due quelli positivi e divida per due i negativi
 
 // function multiplyPoisitiveAndDivideNegative(nbrArray) {
-//     const newArray = [];
+//     const newArray = []; // array vuota
 //     for (const n of nbrArray) {
-//         if (n > 0) {
+//         if (n >= 0) {
 //             newArray.push(n * 2);
 //         } else if (n < 0) {
 //             newArray.push(n / 2);
@@ -877,11 +877,15 @@ const frutti = ["mela", "banana", "mela", "pera", "mela", "banana", "pero", "mel
 // 44) Inverti Array con un ciclo
 // Scrivi una funzione invertiArray(array) che restituisce un nuovo array con gli elementi in ordine inverso.
 // function invertiArray(nbrArray) {
-//     let reverseArray = [];
+//     const reverseArray = [];
 
-//     for (let i = nbrArray.length - 1; i >= 0; i--) {
-//         reverseArray.push(nbrArray[i]);
+//     for (let i = 0; i < nbrArray.length; i++) {
+//         const element = nbrArray[i];
+//         reverseArray.unshift(element);
 //     }
+//     // for (let i = nbrArray.length - 1; i >= 0; i--) {
+//     //     reverseArray.push(nbrArray[i]);
+//     // }
 //     return reverseArray;
 // }
 
@@ -894,9 +898,10 @@ const frutti = ["mela", "banana", "mela", "pera", "mela", "banana", "pero", "mel
 //     let upperWord = [];
 
 //     for (let i = 0; i < nbrArray.length; i++) {
-//         const element = nbrArray[i].toUpperCase();
+//         const element = nbrArray[i]; //nbrArray[i].toUpperCase();
+//         const elementUpper = element.toUpperCase();
 
-//         upperWord.push(element);
+//         upperWord.push(elementUpper);
 //     }
 //     return upperWord;
 // }
@@ -905,8 +910,13 @@ const frutti = ["mela", "banana", "mela", "pera", "mela", "banana", "pero", "mel
 
 // 46) Somma Righe Matrice
 // Scrivi una funzione sommaRighe(matrice) che restituisce un array con la somma degli elementi di ogni riga.
+// const matrice = [
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [7, 8, 9]
+// ];
 // function sommaRighe(nbrArray) {
-//     let risultato = [];
+//     const risultato = [];
 
 //     for (let i = 0; i < nbrArray.length; i++) {
 //         let somma = 0;
@@ -918,8 +928,6 @@ const frutti = ["mela", "banana", "mela", "pera", "mela", "banana", "pero", "mel
 //     }
 //     return risultato;
 // }
-
-
 // console.log(sommaRighe(matrice));
 
 
@@ -940,17 +948,17 @@ const frutti = ["mela", "banana", "mela", "pera", "mela", "banana", "pero", "mel
 
 // 48) Filtra indice pari
 // Scrivi una funzione filtraIndicePari(array) che tiene tutti gli elementi in posizione dispari
-function filtraIndicePari(array) {
-    let nuovoArray = [];
+// function filtraIndicePari(array) {
+//     let nuovoArray = [];
 
-    for (let i = 0; i < array.length; i++) {
-        if (i % 2 !== 0) {
-            nuovoArray.push(array[i]);
-        }        
-    }
-    return nuovoArray;
-}
-console.log(filtraIndicePari(numbers));
+//     for (let i = 0; i < array.length; i++) {
+//         if (i % 2 !== 0) {
+//             nuovoArray.push(array[i]);
+//         }        
+//     }
+//     return nuovoArray;
+// }
+// console.log(filtraIndicePari(numbers));
 
 
 // 49) Somma pari 
@@ -963,7 +971,7 @@ console.log(filtraIndicePari(numbers));
 //         const element = nbrArray[i];
         
 //         if (element % 2 === 0) {
-//             risultatoPari += nbrArray[i];
+//             risultatoPari += element;
 //         }
 //     }
 
@@ -975,12 +983,13 @@ console.log(filtraIndicePari(numbers));
 
 // 50) trova lunghezze
 // Scrivi una funzione trovaLunghezzeParola(array) che restituisce un array delle lunghezze(numeri) delle stringhe che compongono l'array in input
+// const parole = ["ciao", "mondo", "javascript", "array"];
 
-// function trovaLunghezzeParola(nbrArray) {
+// function trovaLunghezzeParola(strignArray) {
 //     let numLengthWord = [];
 
-//     for (let i = 0; i < nbrArray.length; i++) {
-//         const element = nbrArray[i].length;
+//     for (let i = 0; i < strignArray.length; i++) {
+//         const element = strignArray[i].length;
 //         numLengthWord.push(element);
 //     }
 //     return numLengthWord;
